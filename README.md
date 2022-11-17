@@ -12,4 +12,4 @@ numAnalyzer(num);\
 **Code:**\
 const num = 3;\
 numAnalyzer(num);\
-**Expected Output: ""Won't you be my neighbor?"**
+**Expected Output: "Won't you be my neighbor?"**
