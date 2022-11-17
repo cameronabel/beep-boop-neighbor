@@ -11,4 +11,12 @@ function numAnalyzer(num) {
   }
 }
 
-console.log(numAnalyzer(1));
+function generateResponses(maxNum) {
+  const numArray = []
+  for (i = 0; i <= maxNum; i++) {
+    numArray.push(i);
+  }
+  return numArray;
+  //const responses = numArray.map(numAnalyzer)
+}
+console.log(generateResponses(4));

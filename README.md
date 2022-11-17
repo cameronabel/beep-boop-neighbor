@@ -43,3 +43,11 @@ numAnalyzer(num);\
 const num = 12;\
 numAnalyzer(num);\
 **Expected Output: "Boop"**
+
+## Describe:  generateResponses()
+
+#### Test: It should return an array of numbers from 0 to the input number (inclusive).
+**Code:**\
+const num = 4;
+generateResponses(num);
+**Expected Output: [0, 1, 2, 3, 4]**
