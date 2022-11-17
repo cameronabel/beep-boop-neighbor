@@ -1,5 +1,8 @@
 function numAnalyzer(num) {
-  return num.toString()
+  const stringedNum = num.toString();
+  if (stringedNum.match(/3/)) {
+    return "Won't you be my neighbor?"
+  }
 }
 
-console.log(numAnalyzer(2))
+console.log(numAnalyzer(3));
