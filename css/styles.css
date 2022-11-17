@@ -1,3 +1,11 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial";
+  font-size: 21;
+}
+
 /* Number input arrow removal for Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -8,4 +16,9 @@ input::-webkit-inner-spin-button {
 /* Number input arrow removal for Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+#output-area ul {
+  list-style: none;
+  margin-left: -30px;
 }

@@ -13,16 +13,12 @@ function numAnalyzer(num) {
   }
 }
 
-function inclusiveArray(maxNum, reverse=false) {
+function inclusiveArray(maxNum) {
   const numArray = []
   for (i = 0; i <= maxNum; i++) {
     numArray.push(i);
   }
-  if (reverse) {
-    return numArray.reverse();
-  } else {
-    return numArray;
-  }
+  return numArray;
 }
 
 function generateResponses(maxNum) {
@@ -32,8 +28,11 @@ function generateResponses(maxNum) {
 
 // Interface Logic
 
-function buildList(maxNum) {
+function buildList(maxNum, reversed=false) {
   const responses = generateResponses(maxNum);
+  if (reversed) {
+    responses.reverse();
+  }
   const ul = document.createElement('ul');
   responses.forEach(function(element) {
     let li = document.createElement('li');
@@ -46,12 +45,13 @@ function buildList(maxNum) {
 function handleFormSubmission(event) {
   event.preventDefault()
   const outputZone = document.getElementById("output-area");
-  outputZone.innerText = "";
+  outputZone.innerHTML = "";
   const maxNum = document.getElementById("max-num").value;
-  const ul = buildList(maxNum)
+  const reversed = document.getElementById('reversed').checked;
+  const ul = buildList(maxNum, reversed);
   outputZone.append(ul);
 }
 
 window.onload = function() {
-  document.querySelector("form#beep-boop").addEventListener("submit", handleFormSubmission)
+  document.querySelector("form#beep-boop").addEventListener("submit", handleFormSubmission);
 }
