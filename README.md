@@ -55,4 +55,4 @@ inclusiveArray(num);\
 **Code:**\
 const num = 4;\
 generateResponses(num);\
-**Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", 4]**
+**Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4"]**
