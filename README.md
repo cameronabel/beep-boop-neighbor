@@ -46,13 +46,13 @@ numAnalyzer(num);\
 ## Describe:  inclusiveArray()
 #### Test: It should return an array of numbers from 0 to the input number (inclusive).
 **Code:**\
-const num = 4;
-inclusiveArray(num);
+const num = 4;\
+inclusiveArray(num);\
 **Expected Output: [0, 1, 2, 3, 4]**
 
 ## Describe:  generateResponses()
 #### It should return an array of valid responses from 0 to the input number (inclusive).
 **Code:**\
-const num = 4;
-generateResponses(num);
+const num = 4;\
+generateResponses(num);\
 **Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", 4]**
