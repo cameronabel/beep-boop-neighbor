@@ -1,9 +1,12 @@
 // Business Logic
 
-function numAnalyzer(num) {
+function numAnalyzer(num, neighbor) {
   const stringedNum = num.toString();
+  if (neighbor) {
+    neighbor = ", " + neighbor;
+  }
   if (stringedNum.match(/3/)) {
-    return "Won't you be my neighbor?";
+    return `Won't you be my neighbor${neighbor}?`;
   } else if (stringedNum.match(/2/)) {
     return "Boop!";
   } else if (stringedNum.match(/1/)) {
@@ -21,21 +24,21 @@ function inclusiveArray(maxNum) {
   return numArray;
 }
 
-function generateResponses(maxNum) {
-  return inclusiveArray(maxNum).map(numAnalyzer);
+function generateResponses(maxNum, neighbor) {
+  return inclusiveArray(maxNum).map(element => numAnalyzer(element, neighbor));
 }
 
 
 // Interface Logic
 
-function buildList(maxNum, reversed=false) {
-  const responses = generateResponses(maxNum);
+function buildList(maxNum, reversed=false, neighbor="") {
+  const responses = generateResponses(maxNum, neighbor);
   if (reversed) {
     responses.reverse();
   }
-  const ul = document.createElement('ul');
+  const ul = document.createElement("ul");
   responses.forEach(function(element) {
-    let li = document.createElement('li');
+    let li = document.createElement("li");
     li.append(element);
     ul.append(li);
   })
@@ -47,8 +50,9 @@ function handleFormSubmission(event) {
   const outputZone = document.getElementById("output-area");
   outputZone.innerHTML = "";
   const maxNum = document.getElementById("max-num").value;
-  const reversed = document.getElementById('reversed').checked;
-  const ul = buildList(maxNum, reversed);
+  const reversed = document.getElementById("reversed").checked;
+  const username = document.getElementById("username").value.trim();
+  const ul = buildList(maxNum, reversed, username);
   outputZone.append(ul);
 }
 
