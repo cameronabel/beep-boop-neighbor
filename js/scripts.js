@@ -1,3 +1,5 @@
+// Business Logic
+
 function numAnalyzer(num) {
   const stringedNum = num.toString();
   if (stringedNum.match(/3/)) {
@@ -11,18 +13,45 @@ function numAnalyzer(num) {
   }
 }
 
-function inclusiveArray(maxNum) {
+function inclusiveArray(maxNum, reverse=false) {
   const numArray = []
   for (i = 0; i <= maxNum; i++) {
     numArray.push(i);
   }
-  return numArray;
+  if (reverse) {
+    return numArray.reverse();
+  } else {
+    return numArray;
+  }
 }
 
 function generateResponses(maxNum) {
-  const responses = inclusiveArray(maxNum).map(numAnalyzer);
-  return responses;
+  return inclusiveArray(maxNum).map(numAnalyzer);
 }
 
 
-console.log(generateResponses(4));
+// Interface Logic
+
+function buildList(maxNum) {
+  const responses = generateResponses(maxNum);
+  const ul = document.createElement('ul');
+  responses.forEach(function(element) {
+    let li = document.createElement('li');
+    li.append(element);
+    ul.append(li);
+  })
+  return ul;
+}
+
+function handleFormSubmission(event) {
+  event.preventDefault()
+  const outputZone = document.getElementById("output-area");
+  outputZone.innerText = "";
+  const maxNum = document.getElementById("max-num").value;
+  const ul = buildList(maxNum)
+  outputZone.append(ul);
+}
+
+window.onload = function() {
+  document.querySelector("form#beep-boop").addEventListener("submit", handleFormSubmission)
+}
