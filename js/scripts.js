@@ -4,9 +4,11 @@ function numAnalyzer(num) {
     return "Won't you be my neighbor?";
   } else if (stringedNum.match(/2/)) {
     return "Boop!";
+  } else if (stringedNum.match(/1/)) {
+    return "Beep!";
   } else {
     return stringedNum;
   }
 }
 
-console.log(numAnalyzer(2));
+console.log(numAnalyzer(1));
