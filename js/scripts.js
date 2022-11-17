@@ -11,12 +11,18 @@ function numAnalyzer(num) {
   }
 }
 
-function generateResponses(maxNum) {
+function inclusiveArray(maxNum) {
   const numArray = []
   for (i = 0; i <= maxNum; i++) {
     numArray.push(i);
   }
   return numArray;
-  //const responses = numArray.map(numAnalyzer)
 }
+
+function generateResponses(maxNum) {
+  const responses = inclusiveArray(maxNum).map(numAnalyzer);
+  return responses;
+}
+
+
 console.log(generateResponses(4));
