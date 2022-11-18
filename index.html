@@ -5,22 +5,27 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  <h1>Beep Boop, Neighbor!</h1>
-  <div id="form-area">
-    <form id="beep-boop">
-      <label field="number">
-        <input type="Number" min="1" max="10000" step="1" id="max-num" value="">
-      </label><br>
-      <label field="name">
-        <input id="username" value="">
-      </label><br>
-      <label for="reversed">Reversed: </label>
-      <input type="checkbox" id="reversed">
-      <button type="submit">Beep Boop!</button>
-    </form>
-  </div> <!-- end form-area -->
-  <div id="output-area">
+  <div class="main">
+    <div id="page">
+      <div id="form-area">
+        <h1>Hi there,<br/>Neighbor!</h1>
+        <form id="beep-boop">
+          <label field="number">Enter a number:&nbsp;
+            <input type="Number" min="0" max="10000" step="1" id="max-num" value="">
+          </label><br>
+          <label field="name">Name:&nbsp;
+            <input id="username" value="">
+          </label><br>
+          <label for="reversed">Reversed:&nbsp;
+            <input type="checkbox" id="reversed">
+          </label><br><br>
+          <button type="submit" class="btn">Beep Boop!</button>
+        </form>
+      </div> <!-- end form-area -->
+      <div id="output-area">
 
-  </div>
+      </div>
+    </div>
+  </div><!-- end main -->
 </body>
 </html>

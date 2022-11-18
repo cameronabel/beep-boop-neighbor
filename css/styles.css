@@ -1,9 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Sans&display=swap');
+
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial";
-  font-size: 21;
+  font-family: 'Merriweather', serif;
+  font-size: 24;
+  color: #EEEEEE;
+  background-color: #292929;
+}
+
+#page {
+  background-image: url("../img/tie.png");
+  background-position: center top;
+  height: 100vh;
+  background-color: #d12436;
+  background-repeat: no-repeat;
+  min-width: 1000px;
+  width: 100vw;
+  position: absolute;
+}
+
+#form-area {
+  margin: 0;
+  position: absolute;
+  max-width: 40%;
+  top: 50%;
+  right: 65%;
+  -ms-transform: translate(-5vw, -50%);
+  transform: translate(-5vw, -50%);
+}
+
+#beep-boop {
+  line-height: 140%;
+  
+  display: inline-block;
+}
+
+#output-area {
+  margin: 0;
+  position: absolute;
+  width: 35%;
+  left: 65%;
+  top: 50%;
+  -ms-transform: translate(-5vw, -50%);
+  transform: translate(-5vw, -50%);
+  max-height: 50vh;
+  overflow-y: scroll;
+  background-color: #4E403F;
+  border-radius: 10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #4E403F;
+}
+
+#output-area::-webkit-scrollbar {
+  width: 20px;
+}
+
+#output-area::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#output-area::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+#output-area::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+input {
+  border-radius: 5px;
+  float: right;
+  border: none;
+}
+
+label {
+  float: right;
 }
 
 /* Number input arrow removal for Chrome, Safari, Edge, Opera */
@@ -21,4 +103,18 @@ input[type=number] {
 #output-area ul {
   list-style: none;
   margin-left: -30px;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  background-color: #4E403F;
+  font-family: inherit;
+  color: white;
+  float: right;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #FA7D09;
 }
