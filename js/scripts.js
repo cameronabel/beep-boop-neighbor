@@ -1,3 +1,13 @@
+// Utility Logic
+
+function inclusiveArray(maxNum) {
+  const numArray = []
+  for (i = 0; i <= maxNum; i++) {
+    numArray.push(i);
+  }
+  return numArray;
+}
+
 // Business Logic
 
 function numAnalyzer(num, neighbor) {
@@ -14,14 +24,6 @@ function numAnalyzer(num, neighbor) {
   } else {
     return stringedNum;
   }
-}
-
-function inclusiveArray(maxNum) {
-  const numArray = []
-  for (i = 0; i <= maxNum; i++) {
-    numArray.push(i);
-  }
-  return numArray;
 }
 
 function generateResponses(maxNum, neighbor) {

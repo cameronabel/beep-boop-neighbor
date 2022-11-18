@@ -1,4 +1,38 @@
-# TDD Elements
+# _Beep Boop, Neighbor!_
+
+#### By _**Cameron Abel**_
+
+#### _A JS Exercise on Loops and Arrays_
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+## Description
+
+FizzBuzz but with Mr. Robotgers
+
+## Setup/Installation Requirements
+
+This site may be accessed on [GitHub pages](https://cameronabel.github.io/beep-boop-neighbor/). To host this site locally:
+
+- Clone this repository to your local machine
+- Navigate to the top level directory
+- Open `index.html` in your browser
+
+Once active, enter a number and (optionally) a name. Click on `Beep Boop!` to see your results. Select `Reversed` to produce the results in reverse order.
+
+## Known Bugs
+
+- Slow to execute very high values (> 100,000)
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+## TDD Elements
 
 ## Describe: numAnalyzer()
 
@@ -68,3 +102,5 @@ inclusiveArray(num);\
 const num = 4;\
 generateResponses(num);\
 **Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4"]**
+
+Copyright (c) _2022_ _Cameron Abel_
