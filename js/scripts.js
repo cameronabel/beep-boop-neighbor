@@ -30,7 +30,6 @@ function generateResponses(maxNum, neighbor) {
   return inclusiveArray(maxNum).map(element => numAnalyzer(element, neighbor));
 }
 
-
 // Interface Logic
 
 function buildList(maxNum, reversed=false, neighbor="") {
@@ -54,8 +53,10 @@ function handleFormSubmission(event) {
   const maxNum = document.getElementById("max-num").value;
   const reversed = document.getElementById("reversed").checked;
   const username = document.getElementById("username").value.trim();
-  const ul = buildList(maxNum, reversed, username);
-  outputZone.append(ul);
+  if (!(maxNum === "")){
+    const ul = buildList(maxNum, reversed, username);
+    outputZone.append(ul);
+  }
 }
 
 window.onload = function() {
