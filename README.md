@@ -12,7 +12,7 @@
 
 ## Description
 
-FizzBuzz but with Mr. Robotgers
+FizzBuzz but with Mr. Robogers
 
 ## Setup/Installation Requirements
 
