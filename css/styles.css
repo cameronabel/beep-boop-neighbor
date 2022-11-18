@@ -6,13 +6,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Merriweather', serif;
-  font-size: 24;
+  font-size: 20px;
   color: #EEEEEE;
   background-color: #d12436;
 }
 
 #page {
   background-image: url("../img/tie.png");
+  background-size: contain;
   background-position: center top;
   height: 100vh;
   background-color: #d12436;
@@ -83,6 +84,8 @@ input {
   border-radius: 5px;
   float: right;
   border: none;
+  height: 22px;
+  font-size: 19px;
 }
 
 label {
@@ -111,8 +114,10 @@ input[type=number] {
   border-radius: 4px;
   background-color: #4E403F;
   font-family: inherit;
+  font-size: inherit;
   color: white;
   float: right;
+  padding: 5px;
 }
 
 .btn:hover {
