@@ -1,7 +1,7 @@
 // Utility Logic
 
 function inclusiveArray(maxNum) {
-  const numArray = []
+  const numArray = [];
   for (i = 0; i <= maxNum; i++) {
     numArray.push(i);
   }
@@ -47,18 +47,20 @@ function buildList(maxNum, reversed=false, neighbor="") {
 }
 
 function handleFormSubmission(event) {
-  event.preventDefault()
+  event.preventDefault();
   const outputZone = document.getElementById("output-area");
   outputZone.innerHTML = "";
   const maxNum = document.getElementById("max-num").value;
   const reversed = document.getElementById("reversed").checked;
   const username = document.getElementById("username").value.trim();
-  if (!(maxNum === "")){
+  if (maxNum !== ""){
     const ul = buildList(maxNum, reversed, username);
     outputZone.append(ul);
   }
 }
 
 window.onload = function() {
-  document.querySelector("form#beep-boop").addEventListener("submit", handleFormSubmission);
+  document
+    .querySelector("form#beep-boop")
+    .addEventListener("submit", handleFormSubmission);
 }
